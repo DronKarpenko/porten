@@ -39,8 +39,10 @@
                             <li><a href="#">Настройки</a></li>
                         </ul>
                     </nav>
-                    <button type="button" class="button-cart"><i class="icon-cart"></i></button>
-                    <button type="button" class="button-search"><i class="icon-search"></i></button>
+                    <div class="main-header_icons flex">
+                        <button type="button" class="button-cart"><i class="icon-cart"></i></button>
+                        <button type="button" class="button-search"><i class="icon-search"></i></button>
+                    </div>
                     <button type="button" class="menu__icon"><span></span></button>
                 </div>
             </div>
@@ -159,11 +161,14 @@
     <section class="brands">
         <div class="brands-container container">
             <h2 class="section-title">Наши бренды</h2>
-            <div class="brands-slider flex">
-                <div class="brand"><a href="#"><img src="../img/brand.png" alt="brand-name" class="brand-logo"></a></div>
-                <div class="brand"><a href="#"><img src="../img/brand.png" alt="brand-name" class="brand-logo"></a></div>
-                <div class="brand"><a href="#"><img src="../img/brand.png" alt="brand-name" class="brand-logo"></a></div>
-                <div class="brand"><a href="#"><img src="../img/brand.png" alt="brand-name" class="brand-logo"></a></div>
+            <div class="swiper brandsSwiper">
+                <div class="brands-slider swiper-wrapper flex">
+                    <div class="brand swiper-slide"><a href="#"><img src="../img/brand.png" alt="brand-name" class="brand-logo"></a></div>
+                    <div class="brand swiper-slide"><a href="#"><img src="../img/brand.png" alt="brand-name" class="brand-logo"></a></div>
+                    <div class="brand swiper-slide"><a href="#"><img src="../img/brand.png" alt="brand-name" class="brand-logo"></a></div>
+                    <div class="brand swiper-slide"><a href="#"><img src="../img/brand.png" alt="brand-name" class="brand-logo"></a></div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
