@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/iconsfont.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
     <title>Porten</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="top-header">
             <div class="top-header__container container flex">
                 <ul class="top-header__schedule flex">
-                    <li><a href="tel:+798121234567" class="schedule-phone"><i class="icon-phone"></i>8 (812) 123-45-67</a></li>
+                    <li class="schedule-number"><a href="tel:+798121234567" class="schedule-phone"><i class="icon-phone"></i>8 (812) 123-45-67</a></li>
                     <li class="schedule-days">Работаем 7 дней в неделю</li>
                     <li class="schedule-time">9:00 — 18:00</li>
                 </ul>
@@ -40,6 +40,9 @@
                         </ul>
                     </nav>
                     <div class="main-header_icons flex">
+                        <button type="button" class="button-phone">
+                            <a href="tel:+798121234567"><i class="icon-phone"></i></a>
+                        </button>
                         <button type="button" class="button-cart"><i class="icon-cart"></i></button>
                         <button type="button" class="button-search"><i class="icon-search"></i></button>
                     </div>
@@ -58,38 +61,47 @@
         </div>
     </section>
     <section class="collections">
-        <div class="season">
+        <div class="collections-item season">
             <h2 class="section-title">Сезон 2020/21</h2>
-            <div class="products flex">
-                <a href="#" class="products-card">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+            <div class="swiper swiperNewCol">
+                <div class="products swiper-wrapper flex">
+                    <div class="swiper-slide">
+                        <a href="#" class="products-card">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="products-card">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="products-card">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="products-card">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="products-card">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
-        <div class="catalog">
+        <div class="collections-item catalog">
             <h2 class="section-title">Новая коллекция</h2>
             <button class="collect-button">Каталог</button>
         </div>
-        <div class="collect-img"></div>
-        <div class="see-collect">
+        <div class="collections-item collect-img"></div>
+        <div class="collections-item see-collect">
             <h2 class="section-title">Коллекция 2018</h2>
             <p class="see-collect__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada integer. Aenean praesent viverra nulla nullam natoque volutpat curabitur auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra sed diam. </p>
             <button class="collect-button">Посмотреть коллекцию</button>
@@ -98,63 +110,82 @@
     <section class="new-goods">
         <div class="goods-container container">
             <h2 class="section-title">Новые поступления</h2>
-            <div class="goods flex">
-                <a href="#" class="good-cart">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+            <div class="swiper goodsSwiper">
+                <div class="goods swiper-wrapper flex">
+                    <div class="swiper-slide">
+                        <a href="#" class="good-cart">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="good-cart">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="good-cart">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="good-cart">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="good-cart">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="good-cart">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="good-cart">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="good-cart">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="good-cart">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="good-cart">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="good-cart">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="good-cart">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="good-cart">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
-                <a href="#" class="good-cart">
-                    <div class="product-bg">
-                        <img src="img/clock.png" alt="product" class="product-img">
+                    <div class="swiper-slide">
+                        <a href="#" class="good-cart">
+                            <div class="product-bg">
+                                <img src="img/clock.png" alt="product" class="product-img">
+                            </div>
+                            <p class="product-title">Louis XVI ATHOS</p>
+                            <p class="product-price">165 000 руб.</p>
+                        </a>
                     </div>
-                    <p class="product-title">Louis XVI ATHOS</p>
-                    <p class="product-price">165 000 руб.</p>
-                </a>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
