@@ -1,0 +1,399 @@
+@import reset
+@import vars
+
+// font-family: 'PT Sans', sans-serif
+// font-family: 'Playfair Display', serif
+
+// ------------------GENERAL-----------------
+body
+    max-width: 1920px
+    margin: 0 auto
+    font-family: 'PT Sans', sans-serif
+    font-size: 14px
+
+.flex
+    display: flex
+
+.container
+    max-width: 1110px
+    width: 100%
+    margin: 0 auto
+    box-sizing: border-box
+
+.section-title
+    font-family: 'Playfair Display', serif
+    font-size: 36px
+    font-weight: 700
+    text-align: center
+    color: #fff
+    position: relative
+    text-transform: uppercase
+    &::after
+        content: ''
+        position: absolute
+        width: 120px
+        height: 1px
+        background-color: #fff
+        bottom: -40px
+        left: 50%
+        transform: translateX(-50%)
+
+.about-title
+    font-family: 'Playfair Display', serif
+    font-size: 24px
+    color: #fff
+    text-transform: uppercase
+    margin-bottom: 40px
+
+// ------------------------HEADER--------------------
+// -----------------------burger-menu-----------------
+.menu__icon
+    display: none
+    position: relative
+    flex: 0 0 30px
+    width: 30px
+    height: 20px
+    cursor: pointer
+    z-index: 5
+    span,
+    &::before,
+    &::after
+        content: ''
+        transition: all .3s
+        left: 0
+        position: absolute
+        width: 100%
+        height: 3px
+        background-color: $headerGreyColor
+        &:hover
+            color: #fff
+    &::before
+        top: 0px
+    &::after
+        bottom: 0px
+    span
+        top: calc(50% - 1px)
+    .menu-open &
+        span
+            transform: scale(0)
+        &::before
+            transform: rotate(-45deg)
+            top: calc(50% - 1px)
+        &::after
+            transform: rotate(45deg)
+            bottom: calc(50% - 1px)
+
+// --------------------------top-header-----------------
+.header    
+    color: $headerGreyColor
+
+.top-header
+    background-color: #000
+    padding: 14px 0
+    font-size: 12px
+    line-height: 16px
+    &__container
+        align-items: center
+        justify-content: space-between
+        gap: 20px
+    &__schedule
+        align-items: center
+        gap: 30px
+        li
+            position: relative
+            &::after
+                content: ''
+                position: absolute
+                height: 100%
+                top: 0
+                right: -15px
+                width: 1px
+                background-color: $headerGreyColor
+            &:last-of-type
+                &::after
+                    width: 0
+
+.schedule-phone
+    position: relative
+    display: block
+    padding-left: 31px
+
+.icon-phone
+    position: absolute
+    font-size: 16px
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+
+.top-header__registration
+    gap: 3px
+
+.button-entry
+    position: relative
+    .icon-entry
+        font-size: 14px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: -24px
+
+// -------------------------main-header--------------------
+.main-header
+    background-color: $greyBgc
+    &__container
+        align-items: center
+        height: 100%
+        justify-content: space-between
+    &__logo
+        display: inline-block
+        font-size: 24.5px
+        color: #fff
+        margin: 28px 0
+        font-family: 'Post No Bills Jaffna', sans-serif;
+        text-transform: uppercase
+    &__right
+        height: 100%
+        align-items: center
+        gap: 40px
+    &__menu
+        a
+            text-transform: uppercase
+            line-height: 18px
+            padding: 31px 20px
+            &:hover
+                background-color: #1F1F1F
+                color: #fff
+                transition: all .3s
+
+.icon-cart,
+.icon-search
+    font-size: 22px
+    color: #969696
+    &:hover
+        color: #fff
+
+// -----------------------------INTRO-------------------
+.intro
+    background-image: url(../img/main-bg.jpg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    color: #fff
+    padding: 160px 0 154px
+    text-align: center
+
+.intro-title
+    display: inline-block
+
+.intro-title
+    border: 4px solid #fff
+    padding: 105px 64px
+    box-sizing: border-box
+
+h1
+    font-family: 'Post No Bills Jaffna', sans-serif;
+    text-transform: uppercase
+    font-size: 64px
+    border-bottom: 2px solid #fff
+
+.intro-location
+    display: inline-block
+    font-size: 22px
+    text-transform: uppercase
+    margin-top: 10px
+
+.intro-text
+    width: 67.6%
+    margin: 80px auto 0
+    font-size: 16px
+    line-height: 150%
+    text-transform: uppercase
+
+// ----------------------COLLECTIONS------------
+.collections
+    background-color: $darkBgc
+    color: #fff
+    display: flex
+    flex-wrap: wrap
+    font-family: 'Playfair Display', serif
+
+.season
+    width: 54.2%
+    padding: 93px 80px
+    box-sizing: border-box
+    h2
+        margin-bottom: 100px
+        &::after
+            bottom: -50px
+
+.products
+    flex-wrap: wrap
+    justify-content: space-between
+
+.products-card
+    width: 30%
+
+.product-bg
+    background-color: $productColor
+    padding: 55px 22px
+
+.product-img
+    width: 100%
+    max-width: 215px
+    height: auto
+
+
+.product-title
+    font-size: 18px
+    line-height: 24px
+    margin: 25px 0 10px
+
+.product-price
+    font-size: 16px
+    font-weight: 700
+    line-height: 21px
+    color: #d0d0d0
+
+.catalog
+    width: 45.8%
+    text-align: center
+    padding: 485px 0 100px
+    background-image: url(../img/new-collection.jpg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    h2::after
+        bottom: -30px
+
+.collect-img
+    width: 45.8%
+    background-image: url(../img/collection-2018.jpg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+
+.see-collect
+    width: 54.2%
+    padding: 100px 0
+    text-align: center
+    line-height: 150%
+    &__descr
+        width: 45%
+        margin: 80px auto 0
+        font-family: 'PT Sans', sans-serif
+    h2
+        line-height: 43px
+
+.collect-button
+    font-size: 18px
+    line-height: 23px
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    padding: 12px 28px
+    border: 1px solid #fff
+    margin-top: 60px
+    transition: all .3s
+    &:hover
+        background-color: rgba(255, 255, 255, 0.4)
+
+// ---------------------------NEW GOODS----------------------
+.new-goods
+    background-color: $darkBgc
+    padding: 120px 0 150px
+
+.goods
+    margin-top: 120px
+    color: #fff
+    font-family: 'Playfair Display', serif
+    flex-wrap: wrap
+    gap: 23px
+
+.good-cart
+    margin-bottom: 40px
+
+.good-img
+    width: 100%
+    max-width: 250px
+    height: auto
+
+// -------------------------------BRANDS-----------------------
+.brands
+    background-color: $greyBgc
+    padding: 60px 0 80px
+
+.brands-slider
+    margin-top: 80px
+    gap: 30px
+
+.brand-logo
+    width: 100%
+    height: auto
+    max-width: 255px
+
+// ---------------------------------ABOUT----------------------
+.about
+    padding: 80px 0 100px
+    background-image: url(../img/about-bg.jpg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    color: #fff
+    line-height: 150%
+
+.about-container
+    justify-content: space-between
+
+.about-section
+    width: 31.4%
+
+.about-button
+    box-sizing: border-box
+    background-color: $greyBgc
+    padding: 10px 20px
+    text-align: center
+    line-height: 150%
+    color: #d0d0d0
+    &:hover
+        color: #fff
+    
+.categories-buttons
+    flex-wrap: wrap
+    gap: 20px
+
+.form-text
+    margin-bottom: 37px
+
+.sub
+    width: 100%
+
+.form-email
+    width: 60%
+    box-sizing: border-box
+    background: rgba(255, 255, 255, 0.4)
+    color: rgba(255, 255, 255, 0.6)
+    padding: 10px 10px 10px 15px
+
+.submit-button
+    width: 40%
+    text-transform: uppercase
+    letter-spacing: 0.05em
+
+// ---------------------------------FOOTER---------------------
+footer
+    background-color: $greyBgc
+    padding: 17px 0
+
+.footer-container
+    justify-content: space-between
+    align-items: center
+    font-size: 12px
+    line-height: 15.53px
+    color: #d0d0d0
+
+.footer-author
+    font-weight: 700
+    &:hover
+        text-decoration: underline
+
+// -------------------------MEDIA------------------------
+@import media
