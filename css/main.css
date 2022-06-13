@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -64,6 +65,14 @@ button {
   font-family: inherit;
   cursor: pointer;
   color: inherit;
+}
+
+@font-face {
+  font-family: 'Post No Bills Jaffna';
+  src: url("../fonts/PostNoBillsJaffna-Bold.eot");
+  src: local("☺"), url("../fonts/PostNoBillsJaffna-Bold.woff") format("woff"), url("../fonts/PostNoBillsJaffna-Bold.ttf") format("truetype"), url("../fonts/PostNoBillsJaffna-Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
@@ -567,6 +576,9 @@ h1 {
   color: #fff;
   font-family: 'Playfair Display', serif;
   padding-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 23px;
 }
 
 .good-cart {
@@ -715,6 +727,11 @@ footer {
   }
   .intro {
     padding: 120px 0;
+  }
+  .goods {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 0;
   }
 }
 

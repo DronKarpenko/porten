@@ -1,3 +1,21 @@
+function classFunction(){
+  if(jQuery('body').width()<1110){ 
+    jQuery('.swiper').addClass('goodsSwiper');
+    jQuery('.good-cart_swiper').addClass('swiper-slide');
+    jQuery('.goods').addClass('swiper-wrapper');
+  }
+  else{      
+    jQuery('.swiper').removeClass('goodsSwiper');
+    jQuery('.swiper').removeClass('swiper-initialized');
+    jQuery('.swiper').removeClass('swiper-horizontal');
+    jQuery('.swiper').removeClass('swiper-backface-hidden');
+    jQuery('.good-cart_swiper').removeClass('swiper-slide');
+    jQuery('.goods').removeClass('swiper-wrapper');
+  }
+}  
+classFunction();
+jQuery(window).resize(classFunction);
+
 let menuBtn = document.querySelector('.menu__icon');
 let sandwich = document.querySelector('.sandwich');
 let regDate = document.querySelector('.top-header__container');
@@ -19,7 +37,7 @@ var swiper = new Swiper(".brandsSwiper", {
   },
   breakpoints: {
     // when window width is >= 300px
-    300: {
+    200: {
       slidesPerView: 1,
       spaceBetween: 20
     },
@@ -42,7 +60,7 @@ var swiper = new Swiper(".brandsSwiper", {
 });
 
 var swiper = new Swiper(".goodsSwiper", {
-  slidesPerView: 4,
+  slidesPerView: 3,
   spaceBetween: 0,
   pagination: {
     el: ".swiper-pagination",
@@ -50,7 +68,7 @@ var swiper = new Swiper(".goodsSwiper", {
   },
   breakpoints: {
     // when window width is >= 300px
-    300: {
+    200: {
       slidesPerView: 1,
       spaceBetween: 20
     },
@@ -63,11 +81,6 @@ var swiper = new Swiper(".goodsSwiper", {
     768: {
       slidesPerView: 3,
       spaceBetween: 20
-    },
-    // when window width is >= 1110px
-    1110: {
-      slidesPerView: 4,
-      spaceBetween: 23
     }
   }
 });
@@ -81,7 +94,7 @@ var swiper = new Swiper(".swiperNewCol", {
   },
   breakpoints: {
     // when window width is >= 300px
-    300: {
+    200: {
       slidesPerView: 1,
       spaceBetween: 20
     },
